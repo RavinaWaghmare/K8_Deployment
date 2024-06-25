@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+  labels:
+    name: dev
+ 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-deployment
+  namespace: dev
+  labels:
+    app: mobile
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mobile
+  template:
+    metadata:
+      labels:
+        app: mobile
+    spec:
+      containers:
+      - name: mobile
+        image: 339712867708.dkr.ecr.ap-south-1.amazonaws.com/docker_image/latest
+        ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mobile-srv
+  namespace: dev   
+spec:
+  type: ClusterIP
+  selector:
+    app: mobile           
+  ports:
+    - protocol: TCP
+      port: 80                      
+      targetPort: 80
+---      
