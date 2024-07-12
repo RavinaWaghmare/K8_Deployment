@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: mobile
-        image: 339712867708.dkr.ecr.ap-south-1.amazonaws.com/ecr_repo:19
+        image: 339712867708.dkr.ecr.ap-south-1.amazonaws.com/ecr_repo:21
         ports:
           - containerPort: 8080
 ---
