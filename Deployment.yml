@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: mobile
-        image: 339712867708.dkr.ecr.ap-southeast-1.amazonaws.com/kar_repo:6
+        image: 864981759039.dkr.ecr.ap-southeast-1.amazonaws.com/back-repo:$BUILD_ID
         ports:
           - containerPort: 8080
 ---
