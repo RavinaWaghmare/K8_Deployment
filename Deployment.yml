@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: mobile
-        image: 864981759039.dkr.ecr.ap-southeast-1.amazonaws.com/back_repo:49
+        image: 864981759039.dkr.ecr.ap-southeast-1.amazonaws.com/back_repo:50
         ports:
           - containerPort: 8080
 ---
